@@ -3,8 +3,16 @@
 .main_screen {
   width: 100vw;
   margin-top: 120px;
-  box-shadow: 0px 5px 300px var(--grey);
-  background-color: #FAFAFA;
+}
+@media (max-width: 1550px) {
+  .main_screen {
+    box-shadow: none;
+  }
+}
+@media (max-width: 600px) {
+  .main_screen {
+    margin-top: 45px;
+  }
 }
 .main_screen .main_img {
   width: 100%;
@@ -28,9 +36,19 @@
   max-width: 100%;
   padding: 0 200px;
 }
-@media (max-width: 500px) {
+@media (max-width: 1550px) {
   .main_screen .breadcrumbs {
-    left: 3%;
+    padding: 30px 100px;
+  }
+}
+@media (max-width: 1300px) {
+  .main_screen .breadcrumbs {
+    padding: 30px 40px;
+  }
+}
+@media (max-width: 600px) {
+  .main_screen .breadcrumbs {
+    padding: 30px 10px;
   }
 }
 .main_screen--caption {
@@ -45,82 +63,4 @@
     margin: 10px 0;
     font-size: 32px;
   }
-}
-
-.map {
-  margin-top: 10px;
-  padding: 0 200px;
-  position: relative;
-  height: 100%;
-}
-.map-iframe {
-  height: 700px;
-  position: relative;
-  border-radius: 10px;
-  border: none;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .map-iframe {
-    height: 360px;
-  }
-}
-@media (max-width: 1100px) {
-  .map {
-    padding: 40px;
-  }
-}
-@media (max-width: 500px) {
-  .map {
-    padding: 0;
-  }
-}
-.map-contacts {
-  z-index: 2;
-  padding: 30px;
-  gap: 24px;
-  border-radius: 10px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-  color: var(--black);
-}
-@media (max-width: 500px) {
-  .map-contacts {
-    position: relative;
-    padding: 10px;
-    left: 0;
-    top: 0;
-    transform: none;
-    z-index: 0;
-    margin-bottom: 20px;
-  }
-}
-.map-contacts-title {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 39.01px;
-  text-align: center;
-  color: var(--black);
-}
-@media (max-width: 500px) {
-  .map-contacts-title {
-    display: none;
-  }
-}
-.map-contact {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: var(--black);
-}
-.map-contact-text, .map-contact-phone {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24.38px;
-  text-align: left;
 }/*# sourceMappingURL=main_screen.css.map */

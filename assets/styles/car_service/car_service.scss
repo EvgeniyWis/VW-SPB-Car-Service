@@ -64,10 +64,19 @@
         padding-bottom: 0;
     }
 
+    @media (max-width: 600px) {
+        padding: 0px 15px;
+    }
+
     &--caption {
         font-weight: 700;
         font-size: 40px;
         text-align: center;
+
+        @media (max-width: 600px) {
+            font-size: 32px;
+            line-height: 39.01px;
+        }
     }
 
     &_wrapper {
@@ -85,6 +94,11 @@
             grid-template-columns: 1fr;
             gap: 50px;
         }
+
+        @media (max-width: 600px) {
+            gap: 20px;
+            margin-top: 0;
+        }
     }
 
     &_types {
@@ -92,7 +106,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 30%);
         gap: 10px;
-        column-gap: 200px;
+        column-gap: 150px;
 
         @media (max-width: 1650px) {
             column-gap: 100px;
@@ -116,7 +130,7 @@
 
         @media (max-width: 500px) {
             grid-template-columns: 1fr;
-            gap: 10px;
+            gap: 5px;
         }
 
         @media (max-width: 400px) {
@@ -385,10 +399,10 @@
         font-size: 20px;
         font-weight: bold;
 
-        @media (max-width: 800px) {
-            width: 300px;
-            align-self: center;
-        }
+        // @media (max-width: 800px) {
+        //     width: 300px;
+        //     align-self: center;
+        // }
 
         @media (max-width: 400px) {
             width: 100%;
@@ -400,9 +414,9 @@
 .services_sales {
     display: flex;
     flex-direction: column;
-    padding: 0 250px;
+    padding: 0 200px;
     color: #000000;
-    margin-top: 50px;
+    margin-top: 100px;
     margin-bottom: 50px;
 
     @media (max-width: 1550px) {
@@ -415,6 +429,8 @@
 
     @media (max-width: 500px) {
         padding: 0 10px;
+        margin-top: 80px;
+        margin-bottom: 0;
     }
 
     &--caption {
@@ -422,15 +438,22 @@
         font-size: 40px;
         line-height: 48.76px;
         margin-bottom: 50px;
+
+        @media (max-width: 600px) {
+            font-size: 32px;
+            line-height: 39.01px;
+        }
     }
 
     &--wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 46.1%);
         gap: 20px;
+        justify-content: center;
 
         @media (max-width: 500px) {
-            gap: 0px;
+            gap: 5px;
+            grid-template-columns: repeat(2, 50%);
         }
     }
 }
@@ -443,7 +466,7 @@
 
     @media (max-width: 500px) {
         height: 66%;
-        width: 93%;
+        width: 98%;
     }
 
     &__header {
@@ -518,4 +541,86 @@
         }
     }
 
+}
+
+// Карта
+.map {
+    margin-top: 150px;
+    padding: 0 250px;
+    position: relative;
+    height: 100%;
+    margin-bottom: 50px;
+
+    &-iframe {
+        height: 700px;
+        position: relative;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+
+        @media (max-width: 500px) {
+            height: 360px;
+        }
+    }
+
+    @media (max-width: 1550px) {
+        padding: 0px 100px;
+    }
+
+    @media (max-width: 1300px) {
+        padding: 0px 40px;
+    }
+
+    @media (max-width: 500px) {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    &-contacts {
+        z-index: 2;
+        padding: 30px;
+        gap: 24px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        color: var(--black);
+
+        @media (max-width: 500px) {
+            position: relative;
+            padding: 10px;
+            left: 0;
+            top: 0;
+            transform: none;
+            z-index: 0;
+            margin-bottom: 20px;
+        }
+
+        &-title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 39.01px;
+            text-align: center;
+            color: var(--black);
+        }
+    }
+
+    &-contact {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        color: var(--black);
+
+        &-text,
+        &-phone {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24.38px;
+            text-align: left;
+        }
+    }
 }
