@@ -9,7 +9,7 @@
     box-shadow: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .main_screen {
     margin-top: 45px;
   }
